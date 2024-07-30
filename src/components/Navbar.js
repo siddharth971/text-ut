@@ -1,4 +1,8 @@
-import React from 'react'
+
+import React from 'react';
+import PropType from 'prop-types';
+
+
 
 export const Navbar = (props) => {
     return (
@@ -20,7 +24,7 @@ export const Navbar = (props) => {
                             </li>
                            
                             <li className="nav-item">
-                                <a className="nav-link disabled" aria-disabled="true">Disabled</a>
+                                <a href='/' className="nav-link disabled" aria-disabled="true">Disabled</a>
                             </li>
                         </ul>
                         <form className="d-flex" role="search">
@@ -35,6 +39,7 @@ export const Navbar = (props) => {
 }
 
 
-Navbar.propType= {
-
+Navbar.prototype = {
+    title: PropType.string.isRequired,
+    page : PropType.number.isRequired
 }
