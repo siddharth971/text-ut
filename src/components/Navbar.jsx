@@ -4,7 +4,7 @@ import PropType from 'prop-types';
 
 
 
-export const Navbar = (props) => {
+export const  Navbar = (props)=> {
     return (
         <>
 
@@ -22,7 +22,6 @@ export const Navbar = (props) => {
                             <li className="nav-item">
                                 <a className="nav-link" href="/">Link</a>
                             </li>
-                           
                             <li className="nav-item">
                                 <a href='/' className="nav-link disabled" aria-disabled="true">Disabled</a>
                             </li>
@@ -39,7 +38,9 @@ export const Navbar = (props) => {
 }
 
 
-Navbar.prototype = {
+Navbar.PropType = {
     title: PropType.string.isRequired,
     page : PropType.number.isRequired
 }
+
+export default Navbar();
