@@ -22,6 +22,11 @@ function TextForm(props) {
         setText(text.toLocaleLowerCase());
         console.log()
     }
+    let clearTxt = (event) => {
+        console.log("on click");
+        setText("");
+        console.log()
+    }
 
     return (
         <>
@@ -29,7 +34,8 @@ function TextForm(props) {
                 <h1>{props.heading}</h1>
                 <textarea className="form-control" value={text} onChange={handleOn} id="myBox" rows="8"></textarea>
                 <button className="btn btn-primary my-3" onClick={handleUp}> to UpperCase</button>
-                <button className="btn btn-info my-3 mx-3 btn-outline-light " onClick={handleLo}> to LowerCase</button>
+                <button className="btn btn-danger my-3 mx-3 btn-outline-light " onClick={handleLo}> to LowerCase</button>
+                <button className="btn btn-info my-3 mx-3 btn-outline-light " onClick={clearTxt}> Clear Text</button>
             </div>
 
             <div className="container">
