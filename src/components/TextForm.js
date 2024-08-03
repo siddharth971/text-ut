@@ -3,13 +3,17 @@ import { useState } from "react";
 
 function TextForm(props) {
 
-    const [text,setText] = useState('enter text hare');
-    const handleUp = () => {
+
+    let [text, setText] = useState('enter text hare');
+    let handleUp = (event) => {
         console.log(text);
-        setText = "You have click in upper text click";
+        setText(event.target.value);
+
     }
-    const handleOn = () => {
-        console.log("on click")
+    let handleOn = (event) => {
+        console.log("on click");
+        setText(text.toUpperCase());
+        console.log()
     }
 
     return (
