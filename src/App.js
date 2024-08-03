@@ -15,7 +15,7 @@ function App(props) {
         <div className='container my-3'>
 
           <TextForm heading='Enter text to analyze' />
-          <button className="btn btn-primary"> to UpperCase</button>
+         
         </div>
       </div>
 
