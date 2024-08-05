@@ -3,11 +3,29 @@ import React, { useState } from 'react'
 export default function About() {
   const [myStyle, setMyStyle] = useState({
     background: "black",
-    color: "whit"
+    color: "white"
   })
 
+  const [myBtn, setBtn] = useState("Dark Mode");
+
   const btnChange = () => {
-      
+    if (myStyle.color === "white") {
+      setBtn("Black Mode")
+      setMyStyle({
+
+        color: "black",
+        background: "white"
+      }
+      )
+    } else {
+      setBtn("White Mode");
+      setMyStyle({
+
+        color: "white",
+        background: "black"
+      }
+      )
+    }
   }
   return (
     <div>
@@ -44,7 +62,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        <button className=" btn btn-light my-2" onClick={btnChange} >light mode </button>
+        <button className=" btn btn-light my-2" onClick={btnChange} >{myBtn} </button>
       </div>
     </div>
   )
