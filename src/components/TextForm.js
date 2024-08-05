@@ -30,7 +30,7 @@ function TextForm(props) {
 
     return (
         <>
-            <div className=" container my-3">
+            <div className=" container my-3" >
                 <h1>{props.heading}</h1>
                 <textarea className="form-control" value={text} onChange={handleOn} id="myBox" rows="8"></textarea>
                 <button className="btn btn-primary my-3" onClick={handleUp}> to UpperCase</button>
