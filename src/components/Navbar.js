@@ -4,21 +4,24 @@ import PropTypes from 'prop-types'
 
 function Navbar(props) {
     const [bg, setBg] = useState("dark");
+    const [title,setitle]= useState("white")
 
     const lt = ()=> {
         if (bg === "white") {
             setBg("dark");
+            setitle("white")
 
         }
         else {
             setBg("white");
+            setitle("black")
         }
     }
     return (
         <>
-            <nav className={`navbar navbar-expand-lg bg-${bg} `} data-bs-theme="dark">
-                <div className="container-fluid mx-5">
-                    <a className="navbar-brand" href="/">{props.page}</a>
+            <nav className={`navbar navbar-expand-lg bg-${bg} text-${title} `} data-bs-theme={`${bg}`}>
+                <div className="container-fluid mx-5 ">
+                    <a className="navbar-brand text" href="/">{props.page}</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -41,9 +44,9 @@ function Navbar(props) {
                                 </ul>
                             </li>
                         </ul>
-                        <div className="form-check form-switch">
+                        <div className={`form-check form-switch `}>
                             <input className="form-check-input" type="checkbox" role="switch" onClick={lt} id="flexSwitchCheckDefault" />
-                            <label className="form-check-label" htmlFor="flexSwitchCheckDefault">{props.setTggle=bg}</label>
+                            <label className={`form-check-label text-${title}`} htmlFor="flexSwitchCheckDefault">{title}</label>
                         </div>
                     </div>
                 </div>
