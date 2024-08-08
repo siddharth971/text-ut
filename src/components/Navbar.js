@@ -10,11 +10,13 @@ function Navbar(props) {
         if (bg === "white") {
             setBg("dark");
             setitle("white")
-
+            document.title = "text-ut dark thime "
+           
         }
         else {
             setBg("white");
             setitle("black")
+            document.title = "text-ut light thime "
         }
     }
     return (
