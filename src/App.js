@@ -15,7 +15,7 @@ function App(props) {
 
   return (
     <Router>
-      <Navbar className='my-0' alert={setAlert} title="Home" page="Text-Home" />
+      <Navbar className='my-0' alert={setAlert} title="Home" page="TextForm" />
       <div className='container my-3'>
         <Routes>
           <Route path="/alert" element={<Alert alert={alert} />} />
